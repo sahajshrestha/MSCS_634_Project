@@ -2,7 +2,7 @@ MSCS 634 - Final Project Report
 Title: Heart Disease Analysis Using Machine Learning
 Deliverables: Data Cleaning & EDA | Regression | Classification, Clustering & Pattern Mining
 
-📁 Dataset Overview
+Dataset Overview
 We used a modified version of the UCI Heart Disease dataset with 1,035 records and 14 attributes including age, sex, chest pain type, cholesterol, and more. Categorical attributes were one-hot encoded, and numerical features were cleaned and normalized where necessary.
 
 Depending on the task:
@@ -12,7 +12,7 @@ Target (for regression): chol (serum cholesterol level)
 
 🔹 Deliverable 1: Data Collection, Cleaning, and Exploration
 
-📊 Data Cleaning Steps
+Data Cleaning Steps
 
 Missing Values:
 Found in chol, thalach, and oldpeak
@@ -25,7 +25,7 @@ Outliers:
 Detected extreme values in chol, trestbps, thalach, oldpeak
 Capped using the IQR method
 
-📈 Exploratory Data Analysis (EDA)
+Exploratory Data Analysis (EDA)
 
 Feature Distributions: Validated for normality and shape
 
@@ -35,7 +35,7 @@ thalach and oldpeak negatively correlated
 
 Boxplots: Outlier handling confirmed visually
 
-💡 Key Insights
+Key Insights
 
 Dataset is now clean, consistent, and ready for modeling
 Key features for modeling: cp, thalach, oldpeak, exang
@@ -72,7 +72,7 @@ Linear Regression	Low	High	Higher	Weak prediction power
 Ridge Regression	Slightly Better	Lower	Improved	Best overall performer
 
 
-🔍 Insight:
+Insight:
 
 Ridge performed better due to regularization
 Predicting chol with current features has limited success
@@ -80,7 +80,7 @@ Future work: Try different targets or apply feature selection
 
 🔹 Deliverable 3: Classification, Clustering, and Pattern Mining
 
-1️⃣ Classification
+Classification
 Objective:
 Predict heart disease presence (target)
 
@@ -98,20 +98,20 @@ Decision Tree: Best max_depth = 4
 
 KNN: Best k = 5
 
-🔍 Insight:
+Insight:
 
 KNN slightly better post-scaling
 F1-score and confusion matrix used for evaluation
 
-2️⃣ Clustering (KMeans)
+Clustering (KMeans)
 Applied KMeans (k=2) on standardized data
 
 Used PCA to visualize clusters in 2D
 
-🔍 Insight:
+Insight:
 Clusters roughly matched true labels, confirming natural separability despite being unsupervised.
 
-3️⃣ Association Rule Mining (Apriori)
+Association Rule Mining (Apriori)
 Used Apriori on one-hot encoded features (cp, fbs, etc.)
 
 Discovered strong rules linking symptoms and disease
@@ -123,12 +123,12 @@ Confidence: 78.5%
 
 Lift: 1.53
 
-🔍 Insight:
+Insight:
 Uncovered meaningful symptom combinations linked to heart disease
 
 Helpful for rule-based health decision systems
 
-🧠 Final Reflections
+Final Reflections
 Challenges Faced:
 Data issues like missing values, outliers, and noisy records
 
@@ -143,7 +143,7 @@ Python: Pandas, Scikit-learn, Seaborn, Matplotlib
 
 
 
-✅ Conclusion
+Conclusion
 Across all deliverables, we successfully:
 Cleaned and explored a complex health dataset
 Built and evaluated regression models for cholesterol prediction
